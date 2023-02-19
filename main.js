@@ -1,12 +1,10 @@
-document.addEventListener("keyup", (e) => {
-  if (e.key === 'Enter') {
-    const input1 = Number(document.querySelector("#input1").value);
+document.querySelector("#button").addEventListener("click", (e) => {
+  const input1 = Number(document.querySelector("#input1").value);
 
-    const select1 = document.querySelector("#select1").value;
-    const select2 = document.querySelector("#select2").value;
+  const select1 = document.querySelector("#select1").value;
+  const select2 = document.querySelector("#select2").value;
 
-    if (input1 > 0 && select1 && select2) return fetchData(input1, select1, select2);
-  }
+  if (input1 > 0 && select1 && select2) return fetchData(input1, select1, select2);
 });
 
 const fetchData = (value, currencyFrom, currencyTo) => {
